@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SK TENNIS Academy - Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .placeholder-logo {
+            width: 100px;
+            height: 50px;
+            background: url('tennislogo1.png') no-repeat center center;
+            background-size: contain;
+        }
+        .placeholder-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="d-flex justify-content-between align-items-center p-3 bg-white shadow-sm">
+        <div class="logo">
+            <div class="placeholder-logo"></div> <!-- Logo image -->
+        </div>
+        <h1>SK TENNIS Academy</h1>
+        <div class="user-auth d-flex align-items-center">
+            <input type="text" class="form-control mr-2" placeholder="Username">
+            <input type="password" class="form-control mr-2" placeholder="Password">
+            <button class="btn btn-primary">Login</button>
+            <div class="register ml-3">
+                <span>New member?</span>
+                <a href="#">Register Here</a>
+            </div>
+        </div>
+    </header>
+    <nav class="bg-light p-2">
+        <ul class="nav nav-pills justify-content-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="coaches.html">Coaches</a></li>
+            <li class="nav-item"><a class="nav-link" href="book-lesson.html">Book a Lesson</a></li>
+            
+        </ul>
+    </nav>
+    <main class="d-flex">
+        <aside class="bg-info p-3 text-white" style="width: 200px;">
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link text-white" href="#">Kids</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Teens</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Adults</a></li>
+            </ul>
+        </aside>
+        <section class="content p-4 flex-grow-1 bg-warning">
+            <h2>Home/Services</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="placeholder-image mb-3" style="background-image: url('kidslessons.jpeg');"></div> <!-- Placeholder for image 1 -->
+                </div>
+                <div class="col-md-4">
+                    <div class="placeholder-image mb-3" style="background-image: url('teenslessons.webp');"></div> <!-- Placeholder for image 2 -->
+                </div>
+                <div class="col-md-4">
+                    <div class="placeholder-image mb-3" style="background-image: url('adultslessons.jpeg');"></div> <!-- Placeholder for image 3 -->
+                </div>
+            </div>
+            <p>Overview of the tennis lessons that we offer including the age ranges, type of lessons and hourly rates per session:</p>
+            <p>Tax excluded for every fee in the table*</p>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Age Group</th>
+                        <th>Lesson Type</th>
+                        <th>Beginners Level (CAD)</th>
+                        <th>Intermediate Level (CAD)</th>
+                        <th>Advanced Level (CAD)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Kids (5-12 Years)</td>
+                        <td>Group</td>
+                        <td>20</td>
+                        <td>25</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Private</td>
+                        <td>50</td>
+                        <td>55</td>
+                        <td>60</td>
+                    </tr>
+                    <tr>
+                        <td>Teens (13-17 Years)</td>
+                        <td>Group</td>
+                        <td>25</td>
+                        <td>30</td>
+                        <td>35</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Private</td>
+                        <td>55</td>
+                        <td>60</td>
+                        <td>65</td>
+                    </tr>
+                    <tr>
+                        <td>Adults (18+ Years)</td>
+                        <td>Group</td>
+                        <td>30</td>
+                        <td>35</td>
+                        <td>40</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Private</td>
+                        <td>60</td>
+                        <td>65</td>
+                        <td>70</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer class="bg-white p-4 d-flex justify-content-between shadow-sm">
+        <div class="opening-hours">
+            <h3>Opening hours for lessons</h3>
+            <p>Tuesday: 04:30 p.m. - 07:30 p.m.</p>
+            <p>Wednesday: 04:30 p.m. - 7:30 p.m.</p>
+            <p>Friday: 04:30 p.m. - 7:30 p.m.</p>
+            <p>Saturday: 11:00 a.m. - 05:30 p.m.</p>
+        </div>
+        <div class="contact">
+            <h3>Contact</h3>
+            <p>WhatsApp/Call: (647) 446-7870</p>
+            <p>E-mail: mikeyoklm77@gmail.com</p>
+            <p>Address: 155 Rue de L'Atmosphère, Gatineau, QC, J9A 3H9</p>
+        </div>
+    </footer>
+</body>
+</html>

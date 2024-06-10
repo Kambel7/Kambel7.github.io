@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SK TENNIS Academy - Book a Lesson</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .placeholder-logo {
+            width: 100px;
+            height: 50px;
+            background: url('tennislogo1.png') no-repeat center center;
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+    <header class="d-flex justify-content-between align-items-center p-3 bg-white shadow-sm">
+        <div class="logo">
+            <div class="placeholder-logo"></div> 
+        </div>
+        <h1>SK TENNIS Academy</h1>
+        <div class="user-auth d-flex align-items-center">
+            <input type="text" class="form-control mr-2" placeholder="Username">
+            <input type="password" class="form-control mr-2" placeholder="Password">
+            <button class="btn btn-primary">Login</button>
+            <div class="register ml-3">
+                <span>New member?</span>
+                <a href="#">Register Here</a>
+            </div>
+        </div>
+    </header>
+    <nav class="bg-light p-2 ">
+        <ul class="nav nav-pills justify-content-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="coaches.html">Coaches</a></li>
+            <li class="nav-item"><a class="nav-link active" href="book-lesson.html">Book a Lesson</a></li>
+        </ul>
+    </nav>
+    <main class="d-flex">
+        <aside class="bg-info p-3 text-white" style="width: 200px;">
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link text-white" href="#">Kids</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Teens</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Adults</a></li>
+            </ul>
+        </aside>
+        <section class="content p-4 flex-grow-1 bg-warning">
+            <h2>Home/Book a Lesson</h2>
+            <h3>BOOK YOUR LESSON TODAY</h3>
+            <form>
+                <div class="form-group">
+                    <label for="fullName">Full name*</label>
+                    <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Phone number*</label>
+                    <input type="tel" class="form-control" id="phoneNumber" placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="studentName">STUDENT INFORMATION</label>
+                    <input type="text" class="form-control" id="studentName" placeholder="Name (if different from previous one)">
+                </div>
+                <div class="form-group">
+                    <label for="selectCoach">Select a coach*</label>
+                    <select class="form-control" id="selectCoach">
+                        <option>Tom Beyahal</option>
+                        <option>Joseph Smith</option>
+                        <option>Mark Andrew</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age*</label>
+                    <select class="form-control" id="age" onchange="updateLessonFee()">
+                        <option value="Kid">Kid (5 to 12 years old)</option>
+                        <option value="Teen">Teen (13 to 17 years old)</option>
+                        <option value="Adult">Adult (18+ years old)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="level">Level*</label>
+                    <select class="form-control" id="level" onchange="updateLessonFee()">
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="lessonType">Type of Lesson*</label>
+                    <select class="form-control" id="lessonType" onchange="updateLessonFee()">
+                        <option value="Group">Group</option>
+                        <option value="Private">Private</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="lessonFee">Lesson Fee*</label>
+                    <input type="number" class="form-control" id="lessonFee" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="lessonDate">Choose a Date and Time for the lesson (Please make sure it’s either Tues/Wed/Fri/Sat to be able to book)*</label>
+                    <input type="date" class="form-control" id="lessonDate">
+                    <input type="time" class="form-control mt-2" id="lessonStartTime" placeholder="Start Time">
+                    <input type="time" class="form-control mt-2" id="lessonEndTime" placeholder="End Time">
+                </div>
+                <div class="form-group">
+                    <label for="totalFee">Total to pay before the lesson</label>
+                    <input type="text" class="form-control" id="totalFee" readonly>
+                </div>
+                <button type="submit" class="btn btn-success">Confirm</button>
+            </form>
+        </section>
+    </main>
+    <footer class="bg-white p-4 d-flex justify-content-between shadow-sm">
+        <div class="opening-hours">
+            <h3>Opening hours for lessons</h3>
+            <p>Tuesday: 04:30 p.m. - 07:30 p.m.</p>
+            <p>Wednesday: 04:30 p.m. - 7:30 p.m.</p>
+            <p>Friday: 04:30 p.m. - 7:30 p.m.</p>
+            <p>Saturday: 11:00 a.m. - 05:30 p.m.</p>
+        </div>
+        <div class="contact">
+            <h3>Contact</h3>
+            <p>WhatsApp/Call: (647) 446-7870</p>
+            <p>E-mail: mikeyoklm77@gmail.com</p>
+            <p>Address: 155 Rue de L'Atmosphère, Gatineau, QC, J9A 3H9</p>
+        </div>
+    </footer>
+    <script src="website.js"></script>
+    <script>
+        const lessonFees = {
+            Kid: {
+                Beginner: { Group: 20, Private: 50 },
+                Intermediate: { Group: 25, Private: 55 },
+                Advanced: { Group: 30, Private: 60 }
+            },
+            Teen: {
+                Beginner: { Group: 25, Private: 55 },
+                Intermediate: { Group: 30, Private: 60 },
+                Advanced: { Group: 35, Private: 65 }
+            },
+            Adult: {
+                Beginner: { Group: 30, Private: 60 },
+                Intermediate: { Group: 35, Private: 65 },
+                Advanced: { Group: 40, Private: 70 }
+            }
+        };
+
+        function updateLessonFee() {
+            const ageGroup = document.getElementById('age').value;
+            const level = document.getElementById('level').value;
+            const lessonType = document.getElementById('lessonType').value;
+
+            if (ageGroup && level && lessonType) {
+                const fee = lessonFees[ageGroup][level][lessonType];
+                document.getElementById('lessonFee').value = fee;
+
+                const totalFee = fee + (fee * 0.13);
+                document.getElementById('totalFee').value = totalFee.toFixed(2);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('lessonDate').setAttribute('min', today);
+        });
+    </script>
+</body>
+</html>
